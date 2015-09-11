@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>Kyle Chapman - Part designer, Part Developer</title>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<header id="main_navigation" class="clearfix">
+		<%= link_to "Kyle Chapman", root_path, class: "name" %>
+		<nav>
+			<%= link_to "Articles", posts_path %>
+			<a href="#">Projects</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+	</header>
+	<%= yield %>
+	<footer id="main_footer">
+		<p class="copyright">&copy;2015 Kyle Chapman</p>
+		<nav>
+			<a href="http://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+			<a href="http://dribbble.com" target="_blank"><i class="fa fa-dribbble"></i></a>
+			<a href="http://github.com" target="_blank"><i class="fa fa-github"></i></a>
+		</nav>
+	</footer>
 </body>
 </html>
